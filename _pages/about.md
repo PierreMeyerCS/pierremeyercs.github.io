@@ -25,7 +25,7 @@ redirect_from:
 
 <br>
 
-Hello there. Since October 2023, I am a Postdoctoral Researcher at Aarhus University, hosted by Claudio Orlandi. I previously completed my PhD. studies jointly at Reichman University (formerly IDC Herzliya) and Université Paris Cité, advised by Elette Boyle and Geoffroy Couteau.
+Hello there. Since October 2023, I am a Postdoctoral Researcher at Aarhus University, hosted by Claudio Orlandi. I previously completed my PhD studies jointly at Reichman University (formerly IDC Herzliya) and Université Paris Cité, advised by Elette Boyle and Geoffroy Couteau.
 
 My research focusses on Cryptography, and more specifically on Secure Multiparty Computation. I am however interested in most problems at the frontier between discrete mathematics and theoretical computer science. In particular the following: Cryptography, Graph Theory, Combinatorics, Complexity Theory.
 

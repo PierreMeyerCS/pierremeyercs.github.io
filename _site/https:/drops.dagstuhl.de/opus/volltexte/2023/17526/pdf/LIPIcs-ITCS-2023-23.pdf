@@ -72,7 +72,7 @@
   <meta property="og:type" content="article">
 
 
-  <meta property="og:description" name="description" content="">
+  <meta property="og:description" name="description" content="AbstractMost recent works on cryptographic obfuscation focus on the high-end regime of obfuscating general circuits while guaranteeing computational indistinguishability between functionally equivalent circuits. Motivated by the goals of simplicity and efficiency, we initiate a systematic study of &quot;low-end&quot; obfuscation, focusing on simpler representation models and information-theoretic notions of security. We obtain the following results.[Positive results via “white-box” learning.] We present a general technique for obtaining perfect indistinguishability obfuscation from exact learning algorithms that are given restricted access to the representation of the input function. We demonstrate the usefulness of this approach by obtaining simple obfuscation for decision trees and multilinear read-k arithmetic formulas.[Negative results via PAC learning.] A proper obfuscation scheme obfuscates programs from a class C by programs from the same class. Assuming the existence of one-way functions, we show that there is no proper indistinguishability obfuscation scheme for k-CNF formulas for any constant k ≥ 3; in fact, even obfuscating 3-CNF by k-CNF is impossible. This result applies even to computationally secure obfuscation, and makes an unexpected use of PAC learning in the context of negative results for obfuscation.[Separations.] We study the relations between different information-theoretic notions of indistinguishability obfuscation, giving cryptographic evidence for separations between them.">
 
 
   <meta property="og:url" content="http://localhost:4000/https:/drops.dagstuhl.de/opus/volltexte/2023/17526/pdf/LIPIcs-ITCS-2023-23.pdf">
@@ -260,7 +260,7 @@
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="On Low-End Obfuscation and Learning">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content="AbstractMost recent works on cryptographic obfuscation focus on the high-end regime of obfuscating general circuits while guaranteeing computational indistinguishability between functionally equivalent circuits. Motivated by the goals of simplicity and efficiency, we initiate a systematic study of &quot;low-end&quot; obfuscation, focusing on simpler representation models and information-theoretic notions of security. We obtain the following results.[Positive results via “white-box” learning.] We present a general technique for obtaining perfect indistinguishability obfuscation from exact learning algorithms that are given restricted access to the representation of the input function. We demonstrate the usefulness of this approach by obtaining simple obfuscation for decision trees and multilinear read-k arithmetic formulas.[Negative results via PAC learning.] A proper obfuscation scheme obfuscates programs from a class C by programs from the same class. Assuming the existence of one-way functions, we show that there is no proper indistinguishability obfuscation scheme for k-CNF formulas for any constant k ≥ 3; in fact, even obfuscating 3-CNF by k-CNF is impossible. This result applies even to computationally secure obfuscation, and makes an unexpected use of PAC learning in the context of negative results for obfuscation.[Separations.] We study the relations between different information-theoretic notions of indistinguishability obfuscation, giving cryptographic evidence for separations between them.">
     <meta itemprop="datePublished" content="January 01, 2023">
     
 
@@ -279,7 +279,13 @@
       
 
       <section class="page__content" itemprop="text">
-        
+        <details>
+<summary>Abstract</summary>
+Most recent works on cryptographic obfuscation focus on the high-end regime of obfuscating general circuits while guaranteeing computational indistinguishability between functionally equivalent circuits. Motivated by the goals of simplicity and efficiency, we initiate a systematic study of "low-end" obfuscation, focusing on simpler representation models and information-theoretic notions of security. We obtain the following results.<br /><br />
+[Positive results via “white-box” learning.] We present a general technique for obtaining perfect indistinguishability obfuscation from exact learning algorithms that are given restricted access to the representation of the input function. We demonstrate the usefulness of this approach by obtaining simple obfuscation for decision trees and multilinear read-k arithmetic formulas.<br /><br />
+[Negative results via PAC learning.] A proper obfuscation scheme obfuscates programs from a class C by programs from the same class. Assuming the existence of one-way functions, we show that there is no proper indistinguishability obfuscation scheme for k-CNF formulas for any constant k ≥ 3; in fact, even obfuscating 3-CNF by k-CNF is impossible. This result applies even to computationally secure obfuscation, and makes an unexpected use of PAC learning in the context of negative results for obfuscation.<br /><br />
+[Separations.] We study the relations between different information-theoretic notions of indistinguishability obfuscation, giving cryptographic evidence for separations between them.
+</details>
 
 
         
@@ -362,8 +368,8 @@
         
 
 <div class="page__footer-copyright">
-  &copy; 2025, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated 2025-08-28 (YYYY-MM-DD)
+  &copy; 2026, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+  Site last updated 2026-01-29 (YYYY-MM-DD)
 </div>
 
       </footer>

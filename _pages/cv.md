@@ -9,13 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Computer Science, Reichman University (Herzliya, Israel) and Université Paris Cité (Paris, France), 2023 (joint PhD. under the French ``cotutelle'' system)
-* Diploma of the Ecole Normale Supérieure de Lyon (confers a Masters degree), 2020
-* M.Sc. in Computer Science, Université Claude Bernard Lyon 1 (Lyon, France), 2019
-* B.Sc. in Computer Science, Université Claude Bernard Lyon 1, (Lyon, France), 2017
-
 Positions
 ======
 * 2023-...: Postdoctoral researcher
@@ -64,13 +57,20 @@ Internships
 
 Professional Service
 ======
-* Programme Committees: TCC [('24)](https://tcc.iacr.org/2024/callforpapers.php), SCN [('24)](https://scn.unisa.it/scn24/index.php/committees/), Crypto [('25)](https://crypto.iacr.org/2025/callforpapers.php)
+* Programme Committees: TCC [('24)](https://tcc.iacr.org/2024/callforpapers.php), SCN [('24)](https://scn.unisa.it/scn24/index.php/committees/), Crypto (['25](https://crypto.iacr.org/2025/callforpapers.php),['26](https://crypto.iacr.org/2025/callforpapers.php))
+
+Education
+======
+* Ph.D in Computer Science, Reichman University (Herzliya, Israel) and Université Paris Cité (Paris, France), 2023 (joint PhD. under the French ``cotutelle'' system)
+* Diploma of the Ecole Normale Supérieure de Lyon (confers a Masters degree), 2020
+* M.Sc. in Computer Science, Université Claude Bernard Lyon 1 (Lyon, France), 2019
+* B.Sc. in Computer Science, Université Claude Bernard Lyon 1, (Lyon, France), 2017
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+  <ol>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ol>
   
 Talks
 ======
