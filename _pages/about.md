@@ -19,6 +19,12 @@ redirect_from:
 <div class="box">
   <h2>News</h2>
   <ul>
+    <li> <h3>January 2026:</h3> Two papers accepted to Eurocrypt 2026
+      <ul>
+        <li> On low-locality MPC, with Elette Boyle and Ran Cohen</li>
+        <li> On group-based AB-LFE, with Claudio Orlandi, Lawrence Roy, and Peter Scholl</li>
+      </ul>
+    </li>
     <li> <h3>May-August 2025:</h3> I'm currently participating in the <a href="https://simons.berkeley.edu/programs/cryptography-10-years-later-obfuscation-proof-systems-secure-computation">Cryptography 10 Years Later: Obfuscation, Proof Systems, and Secure Computation</a> workshop at the Simons Institute for the Theory of Computing.</li>
   </ul>
 </div>

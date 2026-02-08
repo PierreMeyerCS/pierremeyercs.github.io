@@ -2,7 +2,7 @@
 title: "On Low-End Obfuscation and Learning"
 collection: publications
 category: conferences
-permalink: https://drops.dagstuhl.de/opus/volltexte/2023/17526/pdf/LIPIcs-ITCS-2023-23.pdf
+permalink: 
 excerpt:
 date: 2023-1-1
 venue: 'ITCS 2023'
