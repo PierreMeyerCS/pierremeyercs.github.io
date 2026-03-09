@@ -19,6 +19,8 @@ redirect_from:
 <div class="box">
   <h2>News</h2>
   <ul>
+    <li> <h3>March 2026:</h3> Our project "Pseudorandom Correlations for Threshold Cryptography" was awarded a 60000 USD grant from the Amazon Research Awards; team comprised of Geoffroy Couteau (PI), Pierre Meyer, and Mahshid Riahinia.
+    </li>
     <li> <h3>January 2026:</h3> Two papers accepted to Eurocrypt 2026
       <ul>
         <li> On low-locality MPC, with Elette Boyle and Ran Cohen</li>
