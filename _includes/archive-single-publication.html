@@ -1,0 +1,39 @@
+{% comment %}
+  Publications no longer have their own detail page (see _config.yml:
+  collections.publications.output is false), so unlike archive-single.html
+  this never links the title anywhere - everything the reader needs is
+  right here in the list. Fields, in order: title, authors, venue,
+  permalink, eprint, collapsible abstract.
+{% endcomment %}
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <h2 class="archive__item-title" itemprop="headline">
+      {% if include.display_index %}<span class="archive__item-pub-index">[{{ include.display_index }}]</span> {% elsif post.pub_index %}<span class="archive__item-pub-index">[{{ post.pub_index }}]</span> {% endif %}{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
+    </h2>
+
+    {% if post.coauthors %}
+      <p class="page__meta">{{ post.coauthors }}</p>
+    {% endif %}
+
+    {% if post.venue %}
+      <p>Published in <i>{{ post.venue }}</i>{% if post.date %}{% assign pub_year = post.date | date: "%Y" %}{% unless post.venue contains pub_year %}, {{ pub_year }}{% endunless %}{% endif %}</p>
+    {% endif %}
+
+    {% if post.doi or post.eprint %}
+    <p>
+      {% assign sep_needed = false %}
+      {% if post.doi %}<a href="{{ post.doi }}">Permalink</a>{% assign sep_needed = true %}{% endif %}
+      {% if post.eprint %}{% if sep_needed %} | {% endif %}<a href="{{ post.eprint }}">Eprint</a>{% endif %}
+    </p>
+    {% endif %}
+
+    {% if post.excerpt %}
+      <details class="archive__item-abstract">
+        <summary>Abstract</summary>
+        {{ post.excerpt | markdownify }}
+      </details>
+    {% endif %}
+
+  </article>
+</div>

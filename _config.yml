@@ -7,15 +7,16 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-GB"
-site_theme               : "default"
-title                    : "Personal Webpage"
+locale                   : "en-US"
+site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+title                    : "Pierre Meyer"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://pierremeyercs.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+name                     : &name "Pierre Meyer"
+description              : &description "Pierre Meyer's academic homepage - Cryptography, CISPA Helmholtz Center for Information Security"   # Update this with a general description of your site, this is the default if not overridden by a page
+url                      : https://pierremeyercs.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "pierremeyercs/pierremeyercs.github.io"
+repository               : "PierreMeyerCS/pierremeyercs.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -24,40 +25,34 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Pierre Meyer"
-  pronouns         :   
+  pronouns         : #
   bio              : "Cryptographer"
-  location         : "Aarhus"
-  employer         : "Aarhus University"
-  uri              : # URL
-  email            : "pierre.meyer@cs.au.dk" 
+  location         : "Saarbrücken, Germany"
+  employer         : "CISPA Helmholtz Center<br />for Information Security"
 
-  # Academic websites
-  dblp : "https://dblp.org/pid/94/1398.html"
+  # Socials - sidebar links are limited to exactly these six
+  email            : "pierre.meyer@cispa.de"
+  dblp             : "https://dblp.org/pid/94/1398.html"
   googlescholar    : "https://scholar.google.com/citations?user=i7eVkGoAAAAJ&hl=en"
-
-  # Repositories and software development
   github           : "PierreMeyerCS"
-
-  # Social media
-
-  linkedin         : https://www.linkedin.com/in/pierre-meyer-921a03333/ # Username
+  linkedin         : "pierre-meyer-921a03333"
+  institution_url  : #"https://cispa.de/en"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  journals:
-    title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+  manuscripts:
+    title: 'Journal Articles'    
+  books:
+    title: 'Books'
 
 # Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -85,7 +80,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -181,15 +176,8 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
+    output: false
   talks:
     output: true
     permalink: /:collection/:path/
@@ -197,17 +185,6 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: ""
@@ -215,33 +192,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
   # _talks
   - scope:
       path: ""
@@ -255,19 +205,18 @@ defaults:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Outputting
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
 plugins:
-  - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
@@ -276,7 +225,6 @@ plugins:
 
 # Mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
@@ -294,12 +242,6 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
@@ -314,7 +256,7 @@ tag_archive:
 
 
 # HTML Compression
-# - http://jch.penibelst.de/
+# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:

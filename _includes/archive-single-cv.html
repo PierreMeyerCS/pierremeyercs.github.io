@@ -27,16 +27,16 @@
       </div>
     {% endif %}
     <h3 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
+      {% if post.pub_index %}<span class="archive__item-pub-index">[{{ post.pub_index }}]</span> {% endif %}{{ title }}
     </h3>
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
-    {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p> {% endif %}
+    {% if post.venue %}
+      <p class="archive__item-excerpt" itemprop="description">
+        {{ post.venue }}{% if post.date %}{% assign pub_year = post.date | date: "%Y" %}{% unless post.venue contains pub_year %}, {{ pub_year }}{% endunless %}{% endif %}
+      </p>
+    {% endif %}
     </li>
  </article>
 </div>

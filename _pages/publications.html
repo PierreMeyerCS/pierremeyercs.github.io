@@ -6,29 +6,70 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.dblp}}">my dblp profile</a>.</div>
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+  {% comment %}
+    Sorted explicitly by pub_index (a numeric front-matter field) rather than
+    left to default file order. Default order is filename-alphabetical, which
+    breaks once indices reach two digits (e.g. "10_ABC2020.md" sorts before
+    "2_XYZ2024.md").
+  {% endcomment %}
+  {% assign sorted_publications = site.publications | sort: "pub_index" %}
+
+  {% comment %}
+    ===== NUMBERING MODE TOGGLE (code-level only, no site-facing control) =====
+    "page_order"    - numbers reflect the order entries appear on this page,
+                       top to bottom, with no gaps (e.g. 17,16,15,14,... even
+                       though Conference/Journal split pulls entries with
+                       non-adjacent pub_index values into each section).
+    "chronological" - numbers are the raw pub_index (actual chronological
+                       order across the whole shared sequence), which can
+                       show gaps within a section once split by category.
+    Current default: page_order.
+  {% endcomment %}
+  {% assign numbering_mode = "page_order" %}
+
+  {% comment %} Flatten into the exact order entries will be displayed in, respecting category grouping, so page_order numbering can be computed from it. {% endcomment %}
+  {% assign display_order = "" | split: "," %}
+  {% for category in site.publication_category %}
+    {% for post in sorted_publications reversed %}
+      {% if post.category == category[0] %}
+        {% assign display_order = display_order | push: post %}
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
     {% endfor %}
   {% endfor %}
+  {% assign page_order_counter = display_order | size %}
+
+  {% assign title_shown = false %}
+  {% assign current_category = "" %}
+  {% for post in display_order %}
+    {% if post.category != current_category %}
+      {% assign current_category = post.category %}
+      {% for category in site.publication_category %}
+        {% if category[0] == current_category %}
+          <h2>{{ category[1].title }}</h2><hr />
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if numbering_mode == "page_order" %}
+      {% assign display_index = page_order_counter %}
+    {% else %}
+      {% assign display_index = post.pub_index %}
+    {% endif %}
+    {% assign page_order_counter = page_order_counter | minus: 1 %}
+    {% include archive-single-publication.html display_index=display_index %}
+  {% endfor %}
 {% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+  {% assign sorted_publications = site.publications | sort: "pub_index" %}
+  {% assign page_order_counter = sorted_publications | size %}
+  {% for post in sorted_publications reversed %}
+    {% include archive-single-publication.html display_index=page_order_counter %}
+    {% assign page_order_counter = page_order_counter | minus: 1 %}
   {% endfor %}
 {% endif %}
 

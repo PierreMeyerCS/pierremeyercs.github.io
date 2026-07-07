@@ -19,13 +19,11 @@
 
 
 
-<title>CV - Personal Webpage</title>
+<title>CV - Pierre Meyer</title>
 
 
 
-
-
-
+<meta name="description" content="Pierre Meyer’s academic homepage - Cryptography, CISPA Helmholtz Center for Information Security">
 
 
 
@@ -49,7 +47,7 @@
     {
       "@context" : "http://schema.org",
       "@type" : "Person",
-      "name" : "Your Name",
+      "name" : "Pierre Meyer",
       "url" : "http://localhost:4000",
       "sameAs" : null
     }
@@ -63,8 +61,8 @@
 <!-- end SEO -->
 
 <!-- Open Graph protocol data (https://ogp.me/), used by social media -->
-<meta property="og:locale" content="en-GB">
-<meta property="og:site_name" content="Personal Webpage"> 
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Pierre Meyer"> 
 <meta property="og:title" content="CV">
 
 
@@ -77,11 +75,8 @@
 
 <!-- end Open Graph protocol -->
 
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Personal Webpage Feed">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Pierre Meyer Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -91,13 +86,17 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
-<meta http-equiv="cleartype" content="on">
     
 
 <!-- start custom head snippets -->
 
 <!-- Support for Academicons -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></noscript>
+
+<!-- Support for Font Awesome -->
+ <link rel="preload" href="http://localhost:4000/assets/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="http://localhost:4000/assets/css/fontawesome.css"></noscript>
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/images/apple-touch-icon-180x180.png"/>
@@ -106,7 +105,7 @@
 <link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-192x192.png" sizes="192x192"/>
 <link rel="manifest" href="http://localhost:4000/images/manifest.json"/>
 <link rel="icon" href="/images/favicon.ico"/>
-<meta name="theme-color" content="#ffffff"/>
+<meta name="theme-color" content="var(--global-bg-color)"/>
 
 <!-- end custom head snippets -->
 
@@ -118,23 +117,30 @@
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
     
-
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button><span class="navicon"></span></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="http://localhost:4000/">Personal Webpage</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg persist ">
+            <a href="http://localhost:4000/">Pierre Meyer</a>
+          </li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/publications/">Publications</a></li>
+            <li class="masthead__menu-item ">
+              <a href="http://localhost:4000/publications/">Publications</a>
+            </li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/talks/">Talks</a></li>
+            <li class="masthead__menu-item ">
+              <a href="http://localhost:4000/talks/">Selected Talks</a>
+            </li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
+            <li class="masthead__menu-item selected">
+              <a href="http://localhost:4000/cv/">CV</a>
+            </li>
           
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
@@ -145,6 +151,7 @@
     </div>
   </div>
 </div>
+
 
     
 
@@ -174,74 +181,30 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>Aarhus</li>
+        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>Saarbrücken, Germany</li>
       
       
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>Aarhus University</li>
+        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>CISPA Helmholtz Center<br />for Information Security</li>
+      
+      <!-- Socials: limited to email, DBLP, Google Scholar, GitHub, LinkedIn, Institutional Webpage -->
+      
+        <li><a href="mailto:pierre.meyer@cispa.de"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
       
       
-      
-        <li><a href="mailto:pierre.meyer@cs.au.dk"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
-      
-
-      <!-- Font Awesome and Academicons icons / Academic websites -->
+        <li><a href="https://dblp.org/pid/94/1398.html"><i class="ai ai-dblp ai-fw icon-pad-right" aria-hidden="true"></i>DBLP</a></li>
       
       
+        <li><a href="https://scholar.google.com/citations?user=i7eVkGoAAAAJ&hl=en"><i class="ai ai-google-scholar ai-fw icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
       
-        <li><a href="https://dblp.org/pid/94/1398.html"><i class="ai ai-dblp ai-fw icon-pad-right"></i>DBLP</a></li>
-            
-      
-        <li><a href="https://scholar.google.com/citations?user=i7eVkGoAAAAJ&hl=en"><i class="ai ai-google-scholar ai-fw icon-pad-right"></i>Google Scholar</a></li>
-      
-      
-      
-      
-                              
-      
-      
-
-      <!-- Font Awesome icons / Repositories and software development -->
-      
-            
-            
       
         <li><a href="https://github.com/PierreMeyerCS"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
       
-            
-            
-
-      <!-- Font Awesome icons / Social media -->
-              
       
+        <li><a href="https://www.linkedin.com/in/pierre-meyer-921a03333"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
       
-            
-      
-                  
-                  
-      
-            
-            
-      
-        <li><a href="https://www.linkedin.com/in/https://www.linkedin.com/in/pierre-meyer-921a03333/"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
-            
-      
-            
-                  
-            
-      
-            
-            
-      
-              
-      
-                      
-      
-      
-            
     </ul>
   </div>
 </div>
@@ -255,85 +218,77 @@
       <h1 class="page__title">CV</h1>
     
     
-<h1 id="positions">Positions</h1>
-<ul>
-  <li>2023-…: Postdoctoral researcher
-    <ul>
-      <li>Aarhus University</li>
-      <li>Aarhus, Denmark</li>
-    </ul>
-  </li>
-  <li>2016-2020: “Normalien élève”
-    <ul>
-      <li>Ecole Normale Supérieure de Lyon</li>
-      <li>Lyon, France</li>
-    </ul>
-  </li>
-</ul>
+<details class="cv-section">
+  <summary>Education</summary>
 
-<h1 id="internships">Internships</h1>
-<ul>
-  <li>2020: Research intern at IDC Herzliya
-    <ul>
-      <li>Herzliya, Israel</li>
-      <li>Duration: Six months</li>
-      <li>Lab: FACT Center</li>
-      <li>Supervisor: Elette Boyle</li>
-      <li>Topic: Lower Bounds for Topology-Hiding Computation</li>
-    </ul>
-  </li>
-  <li>2019: Research intern at University Paris Diderot
-    <ul>
-      <li>Paris, France</li>
-      <li>Duration: Three months</li>
-      <li>Lab: IRIF</li>
-      <li>Supervisor: Geoffroy Couteau</li>
-      <li>Topic: Secure Computation with Low Communication</li>
-    </ul>
-  </li>
-  <li>2019: Research intern at Aarhus University
-    <ul>
-      <li>Aarhus, Denmark</li>
-      <li>Duration: Six months</li>
-      <li>Lab:  Crypto Group</li>
-      <li>Supervisors: Ivan Damgård and Daniel Tschudi</li>
-      <li>Topic: Toplogy-Hiding Computation.</li>
-    </ul>
-  </li>
-  <li>2018: Research intern at Thalès Communications &amp; Security
-    <ul>
-      <li>Genevilliers, France</li>
-      <li>Duration: three months</li>
-      <li>Supervisors: Binh-Minh Bui-Xuan and Antoine Roux</li>
-      <li>Topic: Performance Analysis of Rectangular Codes with Minimal Feedback Information</li>
-    </ul>
-  </li>
-  <li>2018: Research intern at University Pierre &amp; Marie Curie
-    <ul>
-      <li>Paris, France</li>
-      <li>Duration: six weeks</li>
-      <li>Lab: LIP6</li>
-      <li>Supervisors: Binh-Minh Bui-Xuan and Clémence Magnien</li>
-      <li>Topic: Dynamic Connexity and Parameterised Complexity</li>
-    </ul>
-  </li>
-</ul>
+  <ul>
+    <li>Ph.D in Computer Science, Reichman University (Herzliya, Israel) &amp; Université Paris Cité (Paris, France), 2023</li>
+    <li>Diploma of the École Normale Supérieure de Lyon (confers a Master’s degree), 2020</li>
+    <li>M.Sc. in Computer Science, Université Claude Bernard Lyon 1 (Lyon, France), 2019</li>
+    <li>B.Sc. in Computer Science, Université Claude Bernard Lyon 1 (Lyon, France), 2017</li>
+  </ul>
 
-<h1 id="professional-service">Professional Service</h1>
-<ul>
-  <li>Programme Committees: TCC <a href="https://tcc.iacr.org/2024/callforpapers.php">(‘24)</a>, SCN <a href="https://scn.unisa.it/scn24/index.php/committees/">(‘24)</a>, Crypto (<a href="https://crypto.iacr.org/2025/callforpapers.php">‘25</a>,<a href="https://crypto.iacr.org/2025/callforpapers.php">‘26</a>)</li>
-</ul>
+</details>
 
-<h1 id="education">Education</h1>
-<ul>
-  <li>Ph.D in Computer Science, Reichman University (Herzliya, Israel) and Université Paris Cité (Paris, France), 2023 (joint PhD. under the French ``cotutelle’’ system)</li>
-  <li>Diploma of the Ecole Normale Supérieure de Lyon (confers a Masters degree), 2020</li>
-  <li>M.Sc. in Computer Science, Université Claude Bernard Lyon 1 (Lyon, France), 2019</li>
-  <li>B.Sc. in Computer Science, Université Claude Bernard Lyon 1, (Lyon, France), 2017</li>
-</ul>
+<details open="" class="cv-section">
+  <summary>Work experience</summary>
 
-<h1 id="publications">Publications</h1>
-<ol>
+  <ul>
+    <li>
+      <p>2026-…: Tenure-Track Faculty Member, CISPA, Saarbrücken, Germany</p>
+    </li>
+    <li>2023-2026: Postdoctoral Researcher
+      <ul>
+        <li>Aarhus University, Aarhus, Denmark</li>
+        <li>Host: Claudio Orlandi</li>
+      </ul>
+    </li>
+    <li>2016-2020: Normalien élève
+      <ul>
+        <li>École Normale Supérieure de Lyon, Lyon, France</li>
+      </ul>
+    </li>
+  </ul>
+
+</details>
+
+<details class="cv-section">
+  <summary>Research internships</summary>
+
+  <ul>
+    <li>2020 (6 months): Research intern, IDC Herzliya, Herzliya, Israel
+      <ul>
+        <li>FACT Center. Supervisor: Elette Boyle. Topic: Lower Bounds for Topology-Hiding Computation</li>
+      </ul>
+    </li>
+    <li>2019 (3 months): Research intern, Université Paris Diderot, Paris, France
+      <ul>
+        <li>IRIF. Supervisor: Geoffroy Couteau. Topic: Secure Computation with Low Communication</li>
+      </ul>
+    </li>
+    <li>2019 (6 months): Research intern, Aarhus University, Aarhus, Denmark
+      <ul>
+        <li>Crypto Group. Supervisors: Ivan Damgård and Daniel Tschudi. Topic: Topology-Hiding Computation</li>
+      </ul>
+    </li>
+    <li>2018 (3 months): Research intern, Thalès Communications &amp; Security, Gennevilliers, France
+      <ul>
+        <li>Supervisors: Binh-Minh Bui-Xuan and Antoine Roux. Topic: Performance Analysis of Rectangular Codes with Minimal Feedback Information</li>
+      </ul>
+    </li>
+    <li>2018 (6 weeks): Research intern, Université Pierre &amp; Marie Curie, Paris, France
+      <ul>
+        <li>LIP6. Supervisors: Binh-Minh Bui-Xuan and Clémence Magnien. Topic: Dynamic Connexity and Parameterised Complexity</li>
+      </ul>
+    </li>
+  </ul>
+
+</details>
+
+<details open="" class="cv-section">
+  <summary>Publications</summary>
+
+  <ul>
     
 
 
@@ -345,13 +300,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/15-EC26b/" rel="permalink">Computationally Succinct Authentication from DCR: Attribute-Based Laconic Function Evaluation and More
-</a>
-      
+      <span class="archive__item-pub-index">[17]</span> Computationally Succinct Authentication from DCR: Attribute-Based Laconic Function Evaluation and More
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        Eurocrypt 2026
+      </p>
+    
     </li>
  </article>
 </div>
@@ -368,13 +325,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/14-EC26a/" rel="permalink">Maintaining Sublinear Locality Over Time: Adaptively Secure MPC on a Reusable Hidden Graph
-</a>
-      
+      <span class="archive__item-pub-index">[16]</span> Maintaining Sublinear Locality Over Time: Adaptively Secure MPC on a Reusable Hidden Graph
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        Eurocrypt 2026
+      </p>
+    
     </li>
  </article>
 </div>
@@ -391,13 +350,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/j2-CandC/" rel="permalink">Instantiating the Hash-Then-Evaluate Paradigm: Strengthening PRFs, PCFs, and OPRFs
-</a>
-      
+      <span class="archive__item-pub-index">[15]</span> Instantiating the Hash-Then-Evaluate Paradigm: Strengthening PRFs, PCFs, and OPRFs
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        Cryptography and Communications 17(5), 2025
+      </p>
+    
     </li>
  </article>
 </div>
@@ -414,13 +375,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/13-TCC25/" rel="permalink">Privately Constrained PRFs from DCR: Puncturing and Bounded Waring Rank
-</a>
-      
+      <span class="archive__item-pub-index">[14]</span> Privately Constrained PRFs from DCR: Puncturing and Bounded Waring Rank
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        TCC 2025
+      </p>
+    
     </li>
  </article>
 </div>
@@ -437,13 +400,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        &lt;a href="http://localhost:4000/<a href="https:/eprint.iacr.org/2025/245">2025/245</a>" rel="permalink"&gt;Silent Circuit Relinearisation: Sublinear-Size (Boolean and Arithmetic) Garbled Circuits from DCR
-&lt;/a&gt;
-      
+      <span class="archive__item-pub-index">[13]</span> Silent Circuit Relinearisation: Sublinear-Size (Boolean and Arithmetic) Garbled Circuits from DCR
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        Crypto 2025
+      </p>
+    
     </li>
  </article>
 </div>
@@ -460,13 +425,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/9-SCN24/" rel="permalink">Instantiating the Hash-Then-Evaluate Paradigm: Strengthening PRFs, PCFs, and OPRFs
-</a>
-      
+      <span class="archive__item-pub-index">[12]</span> Rate-1 Arithmetic Garbling From Homomorphic Secret Sharing
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        TCC 2024
+      </p>
+    
     </li>
  </article>
 </div>
@@ -483,13 +450,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/8-EC24/" rel="permalink">Fast Public-Key Silent OT and More from Constrained Naor-Reingold
-</a>
-      
+      <span class="archive__item-pub-index">[11]</span> A Note on Low-Communication Secure Multiparty Computation via Circuit Depth-Reduction
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        TCC 2024
+      </p>
+    
     </li>
  </article>
 </div>
@@ -506,13 +475,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/11-TCC24b/" rel="permalink">Rate-1 Arithmetic Garbling From Homomorphic Secret Sharing
-</a>
-      
+      <span class="archive__item-pub-index">[10]</span> Instantiating the Hash-Then-Evaluate Paradigm: Strengthening PRFs, PCFs, and OPRFs
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        SCN 2024
+      </p>
+    
     </li>
  </article>
 </div>
@@ -529,13 +500,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/10-TCC24a/" rel="permalink">A Note on Low-Communication Secure Multiparty Computation via Circuit Depth-Reduction
-</a>
-      
+      <span class="archive__item-pub-index">[9]</span> Fast Public-Key Silent OT and More from Constrained Naor-Reingold
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        Eurocrypt 2024
+      </p>
+    
     </li>
  </article>
 </div>
@@ -552,13 +525,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/j1-JoC/" rel="permalink">Topology-Hiding Communication from Minimal Assumptions
-</a>
-      
+      <span class="archive__item-pub-index">[8]</span> Topology-Hiding Communication from Minimal Assumptions
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        Journal of Cryptology 36(4), 2023
+      </p>
+    
     </li>
  </article>
 </div>
@@ -575,13 +550,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/7-TCC23/" rel="permalink">Towards Topology-Hiding Computation from Oblivious Transfer
-</a>
-      
+      <span class="archive__item-pub-index">[7]</span> Towards Topology-Hiding Computation from Oblivious Transfer
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        TCC 2023
+      </p>
+    
     </li>
  </article>
 </div>
@@ -598,13 +575,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/6-EC23b/" rel="permalink">Constrained Pseudorandom Functions from Homomorphic Secret-Sharing
-</a>
-      
+      <span class="archive__item-pub-index">[6]</span> Constrained Pseudorandom Functions from Homomorphic Secret-Sharing
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        Eurocrypt 2023
+      </p>
+    
     </li>
  </article>
 </div>
@@ -621,13 +600,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/5-EC23a/" rel="permalink">Sublinear-Communication Secure Multiparty Computation does not require FHE
-</a>
-      
+      <span class="archive__item-pub-index">[5]</span> Sublinear-Communication Secure Multiparty Computation does not require FHE
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        Eurocrypt 2023
+      </p>
+    
     </li>
  </article>
 </div>
@@ -644,13 +625,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/4-ITCS23/" rel="permalink">On Low-End Obfuscation and Learning
-</a>
-      
+      <span class="archive__item-pub-index">[4]</span> On Low-End Obfuscation and Learning
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        ITCS 2023
+      </p>
+    
     </li>
  </article>
 </div>
@@ -667,13 +650,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/3-TCC22/" rel="permalink">Sublinear Secure Computation from New Assumptions
-</a>
-      
+      <span class="archive__item-pub-index">[3]</span> Sublinear Secure Computation from New Assumptions
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        TCC 2022
+      </p>
+    
     </li>
  </article>
 </div>
@@ -690,13 +675,15 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/2-EC21/" rel="permalink">Breaking the Circuit Size Barrier for Secure Computation under Quasi-Polynomial LPN
-</a>
-      
+      <span class="archive__item-pub-index">[2]</span> Breaking the Circuit Size Barrier for Secure Computation under Quasi-Polynomial LPN
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        Eurocrypt 2021
+      </p>
+    
     </li>
  </article>
 </div>
@@ -713,21 +700,27 @@
     <li>
     
     <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/publications/1-TCC20/" rel="permalink">Topology-Hiding Communication from Minimal Assumptions
-</a>
-      
+      <span class="archive__item-pub-index">[1]</span> Topology-Hiding Communication from Minimal Assumptions
+
     </h3>
     
-    <p class="archive__item-excerpt" itemprop="description"></p> 
+    
+      <p class="archive__item-excerpt" itemprop="description">
+        TCC 2020
+      </p>
+    
     </li>
  </article>
 </div>
 
-  </ol>
+  </ul>
 
-<h1 id="talks">Talks</h1>
-<ul>
+</details>
+
+<details open="" class="cv-section">
+  <summary>Selected Talks</summary>
+
+  <ul>
     
 
 
@@ -740,7 +733,7 @@
     
     <h3 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/https:/www.multipartycomputation.com/tpmpc-2024#h.sngcpc2f48od" rel="permalink">Distributed Discrete Logarithms and Applications – Part I
+        <a href="http://localhost:4000/talks/2024-06-03-tpmpc2024" rel="permalink">Distributed Discrete Logarithms and Applications – Part I
 </a>
       
     </h3>
@@ -764,7 +757,7 @@
     
     <h3 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/https:/www.multipartycomputation.com/tpmpc-2022" rel="permalink">The Foundations of Topology-Hiding Computation
+        <a href="http://localhost:4000/talks/2022-06-10-tpmpc2022" rel="permalink">The Foundations of Topology-Hiding Computation
 </a>
       
     </h3>
@@ -788,7 +781,7 @@
     
     <h3 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/https:/www.fields.utoronto.ca/talks/Kernelization-algorithms-some-link-stream-editing-problems" rel="permalink">Kernelization algorithms for some link stream editing problems
+        <a href="http://localhost:4000/talks/2017-10-10-grow2017" rel="permalink">Kernelization algorithms for some link stream editing problems
 </a>
       
     </h3>
@@ -801,57 +794,16 @@
 
   </ul>
 
-<!---
-Teaching
-======
+</details>
+
+<details open="" class="cv-section">
+  <summary>Service and leadership</summary>
+
   <ul>
-    
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <li>
-    
-    <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/teaching/2015-spring-teaching-1" rel="permalink">Teaching experience 2
-</a>
-      
-    </h3>
-    
-    <p class="archive__item-excerpt" itemprop="description"></p> 
-    </li>
- </article>
-</div>
-
-  
-    
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <li>
-    
-    <h3 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/teaching/2014-spring-teaching-1" rel="permalink">Teaching experience 1
-</a>
-      
-    </h3>
-    
-    <p class="archive__item-excerpt" itemprop="description"></p> 
-    </li>
- </article>
-</div>
-
+    <li>Programme Committee member: TCC 2024, SCN 2024, Crypto 2025, Crypto 2026</li>
   </ul>
---->
+
+</details>
 
   </div>
 </div>
@@ -861,35 +813,24 @@ Teaching
       <footer>
         <!-- start custom footer snippets -->
 
-<a href="/sitemap/">Sitemap</a>
-
-<!-- Support for MatJax -->
-<script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
-
-<!-- Support for Plotly -->
-<script defer src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.0.1/plotly.min.js'></script>
-
-<!-- Support for Mermaid -->
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({startOnLoad:true, theme:'default'});
-    await mermaid.run({querySelector:'code.language-mermaid'});
-</script>
+<!-- Support for MathJax -->
+<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"></script>
 
 <!-- end custom footer snippets -->
 
         
 
 <div class="page__footer-copyright">
-  &copy; 2026, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated 2026-03-09 (YYYY-MM-DD)
+  &copy; 2026 Pierre Meyer, Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+  Site last updated 2026-07-07, <a href="/sitemap/" style="text-transform: uppercase;">Sitemap</a>
 </div>
 
       </footer>
     </div>
 
     <script type="module" src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
 
 
 

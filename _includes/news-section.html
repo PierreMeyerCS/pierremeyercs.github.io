@@ -1,0 +1,17 @@
+{% comment %}
+  Renders site.data.news (_data/news.yml, a flat list of {date, text})
+  as a collapsible box, newest first. Open by default - unlike the
+  publications abstract box, news is primary/current content you'd
+  want visible on load, just collapsible if it grows long.
+{% endcomment %}
+{% assign sorted_news = site.data.news | sort: "date" | reverse %}
+{% if sorted_news.size > 0 %}
+<details class="news-box" open>
+  <summary><i class="fas fa-newspaper" aria-hidden="true"></i> News</summary>
+  <ul class="news-list">
+    {% for item in sorted_news %}
+      <li><span class="news-date">{{ item.date | date: "%Y-%m-%d" }}</span> — {{ item.text }}</li>
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}

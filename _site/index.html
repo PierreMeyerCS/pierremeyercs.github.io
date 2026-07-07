@@ -19,13 +19,11 @@
 
 
 
-<title>  Personal Webpage</title>
+<title>Pierre Meyer</title>
 
 
 
-
-
-
+<meta name="description" content="Pierre Meyer’s academic homepage - Cryptography, CISPA Helmholtz Center for Information Security">
 
 
 
@@ -49,7 +47,7 @@
     {
       "@context" : "http://schema.org",
       "@type" : "Person",
-      "name" : "Your Name",
+      "name" : "Pierre Meyer",
       "url" : "http://localhost:4000",
       "sameAs" : null
     }
@@ -63,9 +61,9 @@
 <!-- end SEO -->
 
 <!-- Open Graph protocol data (https://ogp.me/), used by social media -->
-<meta property="og:locale" content="en-GB">
-<meta property="og:site_name" content="Personal Webpage"> 
-<meta property="og:title" content="Personal Webpage">
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Pierre Meyer"> 
+<meta property="og:title" content="Pierre Meyer">
 
 
 
@@ -77,11 +75,8 @@
 
 <!-- end Open Graph protocol -->
 
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Personal Webpage Feed">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Pierre Meyer Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -91,13 +86,17 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
-<meta http-equiv="cleartype" content="on">
     
 
 <!-- start custom head snippets -->
 
 <!-- Support for Academicons -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></noscript>
+
+<!-- Support for Font Awesome -->
+ <link rel="preload" href="http://localhost:4000/assets/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="http://localhost:4000/assets/css/fontawesome.css"></noscript>
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/images/apple-touch-icon-180x180.png"/>
@@ -106,7 +105,7 @@
 <link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-192x192.png" sizes="192x192"/>
 <link rel="manifest" href="http://localhost:4000/images/manifest.json"/>
 <link rel="icon" href="/images/favicon.ico"/>
-<meta name="theme-color" content="#ffffff"/>
+<meta name="theme-color" content="var(--global-bg-color)"/>
 
 <!-- end custom head snippets -->
 
@@ -118,23 +117,30 @@
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
     
-
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button><span class="navicon"></span></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="http://localhost:4000/">Personal Webpage</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg persist selected">
+            <a href="http://localhost:4000/">Pierre Meyer</a>
+          </li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/publications/">Publications</a></li>
+            <li class="masthead__menu-item ">
+              <a href="http://localhost:4000/publications/">Publications</a>
+            </li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/talks/">Talks</a></li>
+            <li class="masthead__menu-item ">
+              <a href="http://localhost:4000/talks/">Selected Talks</a>
+            </li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
+            <li class="masthead__menu-item ">
+              <a href="http://localhost:4000/cv/">CV</a>
+            </li>
           
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
@@ -145,6 +151,7 @@
     </div>
   </div>
 </div>
+
 
     
 
@@ -176,74 +183,30 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>Aarhus</li>
+        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>Saarbrücken, Germany</li>
       
       
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>Aarhus University</li>
+        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>CISPA Helmholtz Center<br />for Information Security</li>
+      
+      <!-- Socials: limited to email, DBLP, Google Scholar, GitHub, LinkedIn, Institutional Webpage -->
+      
+        <li><a href="mailto:pierre.meyer@cispa.de"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
       
       
-      
-        <li><a href="mailto:pierre.meyer@cs.au.dk"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
-      
-
-      <!-- Font Awesome and Academicons icons / Academic websites -->
+        <li><a href="https://dblp.org/pid/94/1398.html"><i class="ai ai-dblp ai-fw icon-pad-right" aria-hidden="true"></i>DBLP</a></li>
       
       
+        <li><a href="https://scholar.google.com/citations?user=i7eVkGoAAAAJ&hl=en"><i class="ai ai-google-scholar ai-fw icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
       
-        <li><a href="https://dblp.org/pid/94/1398.html"><i class="ai ai-dblp ai-fw icon-pad-right"></i>DBLP</a></li>
-            
-      
-        <li><a href="https://scholar.google.com/citations?user=i7eVkGoAAAAJ&hl=en"><i class="ai ai-google-scholar ai-fw icon-pad-right"></i>Google Scholar</a></li>
-      
-      
-      
-      
-                              
-      
-      
-
-      <!-- Font Awesome icons / Repositories and software development -->
-      
-            
-            
       
         <li><a href="https://github.com/PierreMeyerCS"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
       
-            
-            
-
-      <!-- Font Awesome icons / Social media -->
-              
       
+        <li><a href="https://www.linkedin.com/in/pierre-meyer-921a03333"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
       
-            
-      
-                  
-                  
-      
-            
-            
-      
-        <li><a href="https://www.linkedin.com/in/https://www.linkedin.com/in/pierre-meyer-921a03333/"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
-            
-      
-            
-                  
-            
-      
-            
-            
-      
-              
-      
-                      
-      
-      
-            
     </ul>
   </div>
 </div>
@@ -253,7 +216,7 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="">
+    
     
     
     
@@ -261,8 +224,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">
-</h1>
+          
           
         
         
@@ -271,42 +233,26 @@
       
 
       <section class="page__content" itemprop="text">
-        <style>
-  .box {
-    background-color: background-light;
-    border: 2px solid blue;
-    padding: 10px;
-    margin: 10px;
-  }
-</style>
+        <p>I am a tenure-track faculty member at <a href="https://cispa.de">CISPA Helmholtz Center for Information Security</a>. Previously, I was a Postdoctoral Researcher at Aarhus University, hosted by Claudio Orlandi. Before that, I completed my PhD jointly at Reichman University (formerly IDC Herzliya) and Université Paris Cité, advised by Elette Boyle and Geoffroy Couteau.</p>
 
-<div class="box">
-  <h2>News</h2>
-  <ul>
-    <li> <h3>March 2026:</h3> Our project "Pseudorandom Correlations for Threshold Cryptography" was awarded a 60000 USD grant from the Amazon Research Awards; team comprised of Geoffroy Couteau (PI), Pierre Meyer, and Mahshid Riahinia.
-    </li>
-    <li> <h3>January 2026:</h3> Two papers accepted to Eurocrypt 2026
-      <ul>
-        <li> On low-locality MPC, with Elette Boyle and Ran Cohen</li>
-        <li> On group-based AB-LFE, with Claudio Orlandi, Lawrence Roy, and Peter Scholl</li>
-      </ul>
-    </li>
-    <li> <h3>May-August 2025:</h3> I'm currently participating in the <a href="https://simons.berkeley.edu/programs/cryptography-10-years-later-obfuscation-proof-systems-secure-computation">Cryptography 10 Years Later: Obfuscation, Proof Systems, and Secure Computation</a> workshop at the Simons Institute for the Theory of Computing.</li>
+<p>My research focuses on Cryptography, and more specifically on Secure Multiparty Computation. I am also interested in most problems at the frontier between discrete mathematics and theoretical computer science, including Graph Theory, Combinatorics, and Complexity Theory.</p>
+
+<p>You can find a copy of my PhD thesis <a href="https://theses.hal.science/tel-04583917/file/va_Meyer_Pierre.pdf">here</a>, and the complete list of my publications on <a href="https://dblp.org/pid/94/1398.html">my DBLP page</a>, or browse them below.</p>
+
+<details class="news-box" open="">
+  <summary><i class="fas fa-newspaper" aria-hidden="true"></i> News</summary>
+  <ul class="news-list">
+    
+      <li><span class="news-date">2026-07-01</span> — There are <b style="color:#FF0000;">open Postdoc positions</b> in my group. You can contact me at pierre.meyer@cispa.de if you are interested.</li>
+    
+      <li><span class="news-date">2026-03-01</span> — Our project "Pseudorandom Correlations for Threshold Cryptography" was awarded a $60,000 grant from the Amazon Research Awards. Team: Geoffroy Couteau (PI), Pierre Meyer, and Mahshid Riahinia.</li>
+    
+      <li><span class="news-date">2025-05-01</span> — Participating in the Cryptography 10 Years Later: Obfuscation, Proof Systems, and Secure Computation workshop at the Simons Institute for the Theory of Computing (May-August 2025).</li>
+    
   </ul>
-</div>
-
-<p><br /></p>
-
-<p>Hello there. Since October 2023, I am a Postdoctoral Researcher at Aarhus University, hosted by Claudio Orlandi. I previously completed my PhD studies jointly at Reichman University (formerly IDC Herzliya) and Université Paris Cité, advised by Elette Boyle and Geoffroy Couteau.</p>
-
-<p>My research focusses on Cryptography, and more specifically on Secure Multiparty Computation. I am however interested in most problems at the frontier between discrete mathematics and theoretical computer science. In particular the following: Cryptography, Graph Theory, Combinatorics, Complexity Theory.</p>
-
-<p>You may find a copy of my PhD thesis, <a href="https://cs.idc.ac.il/~pierre.meyer/Documents/PhD-Pierre-Meyer.pdf">here</a>.</p>
-
-<p>The complete list of my publications is available on <a href="https://dblp.org/pid/94/1398.html">my dblp page</a>.</p>
+</details>
 
 
-        
 
         
       </section>
@@ -339,35 +285,24 @@
       <footer>
         <!-- start custom footer snippets -->
 
-<a href="/sitemap/">Sitemap</a>
-
-<!-- Support for MatJax -->
-<script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
-
-<!-- Support for Plotly -->
-<script defer src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.0.1/plotly.min.js'></script>
-
-<!-- Support for Mermaid -->
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({startOnLoad:true, theme:'default'});
-    await mermaid.run({querySelector:'code.language-mermaid'});
-</script>
+<!-- Support for MathJax -->
+<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"></script>
 
 <!-- end custom footer snippets -->
 
         
 
 <div class="page__footer-copyright">
-  &copy; 2026, Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated 2026-03-09 (YYYY-MM-DD)
+  &copy; 2026 Pierre Meyer, Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+  Site last updated 2026-07-07, <a href="/sitemap/" style="text-transform: uppercase;">Sitemap</a>
 </div>
 
       </footer>
     </div>
 
     <script type="module" src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
 
 
 

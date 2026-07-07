@@ -1,0 +1,12 @@
+# News items shown on the homepage (see _includes/news-section.html).
+# Add new entries anywhere in the list - they're sorted newest-first
+# automatically, so you don't need to keep this file in date order.
+#
+# date should be YYYY-MM-DD. text can include Markdown/HTML.
+
+- date: 2026-07-01
+  text: "There are <b style='color:#FF0000;'>open Postdoc positions</b> in my group. You can contact me at pierre.meyer@cispa.de if you are interested."
+- date: 2026-03-01
+  text: "Our project \"Pseudorandom Correlations for Threshold Cryptography\" was awarded a $60,000 grant from the Amazon Research Awards. Team: Geoffroy Couteau (PI), Pierre Meyer, and Mahshid Riahinia."
+- date: 2025-05-01
+  text: "Participating in the Cryptography 10 Years Later: Obfuscation, Proof Systems, and Secure Computation workshop at the Simons Institute for the Theory of Computing (May-August 2025)."
