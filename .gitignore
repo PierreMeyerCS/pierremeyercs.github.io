@@ -1,0 +1,9 @@
+# Bundler-installed gems (machine-local; Gemfile.lock pins versions)
+vendor/
+.bundle/
+
+# Jekyll / Sass build output and caches
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
