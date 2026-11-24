@@ -31,7 +31,8 @@
     {% if post.excerpt %}
       <details class="archive__item-abstract">
         <summary>Abstract</summary>
-        {{ post.excerpt | markdownify }}
+        {% comment %}Abstracts use LaTeX $...$ / $$...$$. Double the dollars so kramdown treats them as math (protecting the contents from Markdown) and emits \(..\) / \[..\], which MathJax renders by default.{% endcomment %}
+        {{ post.excerpt | replace: '$$', '@@DISPLAYMATH@@' | replace: '$', '$$' | replace: '@@DISPLAYMATH@@', '$$' | markdownify }}
       </details>
     {% endif %}
 
