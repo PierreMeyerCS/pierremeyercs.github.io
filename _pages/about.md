@@ -12,4 +12,8 @@ My research focuses on Cryptography, and more specifically on Secure Multiparty 
 
 You can find a copy of my PhD thesis [here](https://theses.hal.science/tel-04583917/file/va_Meyer_Pierre.pdf), and the complete list of my publications on [my DBLP page](https://dblp.org/pid/94/1398.html), or browse them below.
 
+I have <b style='color:#FF0000;'>open PhD and Postdoc positions</b> in my group.
+I do not answer generic emails.
+For research internships or PhD positions in particular, a recommendation (even informal) from someone I know is very useful (but not mandatory).
+
 {% include news-section.html %}

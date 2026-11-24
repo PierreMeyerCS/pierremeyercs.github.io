@@ -19,10 +19,10 @@ redirect_from:
 
 </details>
 
-<details markdown="1" open class="cv-section">
-<summary>Work experience</summary>
+<details markdown="1" class="cv-section">
+<summary>Positions</summary>
 
-* 2026-...: Tenure-Track Faculty Member, CISPA, Saarbrücken, Germany
+* 2026-...: Tenure-Track Faculty, CISPA, Saarbrücken, Germany
 
 * 2023-2026: Postdoctoral Researcher
   * Aarhus University, Aarhus, Denmark
@@ -32,6 +32,32 @@ redirect_from:
   * École Normale Supérieure de Lyon, Lyon, France
 
 </details>
+
+<details markdown="1" open class="cv-section">
+<summary>Professional Service</summary>
+
+* Programme Committee member: TCC 2024, SCN 2024, Crypto 2025, Crypto 2026, Crypto 2027, TPMPC 2027
+
+</details>
+
+<details markdown="1" class="cv-section">
+<summary>Selected Talks</summary>
+
+  <ul>{% for post in site.talks reversed %}
+    {% include archive-single-talk-cv.html  %}
+  {% endfor %}</ul>
+
+</details>
+
+<details markdown="1" class="cv-section">
+<summary>Publications</summary>
+
+  <ul>{% assign sorted_publications = site.publications | sort: "pub_index" %}{% for post in sorted_publications reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+
+</details>
+  
 
 <details markdown="1" class="cv-section">
 <summary>Research internships</summary>
@@ -50,30 +76,5 @@ redirect_from:
 
 * 2018 (6 weeks): Research intern, Université Pierre & Marie Curie, Paris, France
   * LIP6. Supervisors: Binh-Minh Bui-Xuan and Clémence Magnien. Topic: Dynamic Connexity and Parameterised Complexity
-
-</details>
-
-<details markdown="1" open class="cv-section">
-<summary>Publications</summary>
-
-  <ul>{% assign sorted_publications = site.publications | sort: "pub_index" %}{% for post in sorted_publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-
-</details>
-  
-<details markdown="1" open class="cv-section">
-<summary>Selected Talks</summary>
-
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-
-</details>
-  
-<details markdown="1" open class="cv-section">
-<summary>Service and leadership</summary>
-
-* Programme Committee member: TCC 2024, SCN 2024, Crypto 2025, Crypto 2026
 
 </details>
